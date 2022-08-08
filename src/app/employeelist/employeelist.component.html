@@ -1,0 +1,17 @@
+<button (click)="show = !show" >Show Employee List</button>
+<table *ngIf="show" border="1">
+    <thead>
+        <th>Full Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Address</th>
+    </thead>
+    <tr *ngFor="let emp of employee">
+        <td>{{emp.fName + " " + emp.mName + " " + emp.lName}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.DOB | date}}</td>
+        <td>{{emp.address1 + " " + emp.address2}}</td>
+    </tr>
+</table>

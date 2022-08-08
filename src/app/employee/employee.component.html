@@ -1,0 +1,60 @@
+<button (click)="show = !show" >Show Employee List</button>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate *ngIf="show">
+
+    <label for="fname">First Name: </label>
+    <input type="text" name="fname" id="" ngModel #name="ngModel" required>
+
+    <br>
+
+    <label for="mname">Middle Name: </label>
+    <input name="mname" ngModel required #name="ngModel">
+
+    <br>
+
+    <label for="lname">Last Name: </label>
+    <input name="lname" ngModel required #name="ngModel">
+
+    <br>
+
+    <label for="age">Age</label>
+    <input type="text" name="age" id="" ngModel required #age="ngModel">
+
+    <br>
+
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender" ngModel required #gender="ngModel">
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="fenale">Female</option>
+    </select>
+
+    <br>
+
+    <label for="birthday">DOB:</label>
+    <input type="date" id="birthday" name="DOB" ngModel required #DOB="ngModel">
+
+    <br>
+
+    <label for="pincode">Pincode</label>
+    <input name="pincode" ngModel required #pincode="ngModel">
+
+    <br>
+
+    <label for="email">Email</label>
+    <input name="email" ngModel required #email="ngModel">
+
+    <br/>
+
+    <label for="add1">Address 1</label>
+    <input name="address1" ngModel required #address1="ngModel">
+
+    <br>
+
+    <label for="add2">Angular 2</label>
+    <input name="address2" ngModel required #address1="ngModel">
+
+    <br>
+
+    <button>Submit</button>
+
+ </form>
